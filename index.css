@@ -1,0 +1,17 @@
+body{
+    position: absolute;
+    width: 100%;
+
+    background: linear-gradient(180deg, #E4DBB3 17.95%, rgba(131, 196, 134, 0.727972) 49%, rgba(10, 196, 228, 0) 100%);
+}
+/* Introduction */
+.introduction #github{
+    width: 50px;
+    height: 50px;
+    background-image: url('./image/GitHub.png');
+}
+/*software developer*/
+.software-developer img{
+    width: 1037px;
+    height: 938px;
+}
