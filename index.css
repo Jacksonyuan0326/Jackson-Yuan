@@ -1,17 +1,108 @@
+/* basic setting */
+a{
+    text-decoration: none;
+    color:black
+}
+
+
+/* body adjustment */
 body{
     position: absolute;
     width: 100%;
-
     background: linear-gradient(180deg, #E4DBB3 17.95%, rgba(131, 196, 134, 0.727972) 49%, rgba(10, 196, 228, 0) 100%);
 }
-/* Introduction */
-.introduction #github{
-    width: 50px;
-    height: 50px;
-    background-image: url('./image/GitHub.png');
+
+
+/* Navigation */
+.navigation .website-logo{
+    display: inline-block;
+
+    margin: 10px 10px;
 }
-/*software developer*/
-.software-developer img{
-    width: 1037px;
+.navigation .switchlink{
+    margin-top: 15px;
+    position: absolute;
+    right: 10%;
+    display: inline-block;
+}
+.navigation a{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+/* Introduction */
+.introduction{
+    position: relative;
+    top: 50px;
+    margin-top: 40px;
+    display: flex;
+}
+.introduction .self-introduction{
+    display: block;
+    width: 1000px;
+    margin-left: 80px;
+}
+.introduction h2{
+    margin-left: 5%;
+}
+.introduction h1{
+    margin-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+}
+.introduction h3{
+    margin-left: 5%;
+}
+.introduction .contactlogo{
+    display: block;
+    width: 390px;
+    height: 52px;
+    margin-top: 40px;
+    margin-left: 12%;
+}
+.introduction #resume{
+    display: block;
+    margin-top: 40px;
+    margin-left: 20%;
+}
+.introduction .contactlogo img{
+    display: inline-block;
+    margin-left: 15px;
+    /* float: right; */
+}
+.introduction .selfie{
+    display: inline-block;
+}
+.introduction .selfie img{
+    width: 1037.63px;
     height: 938px;
+}
+
+
+/*software developer*/
+.software-developer{
+    position: relative;
+    top: 50px;
+    margin-top: 40px;
+    display: flex;
+}
+
+/* web developer */
+.web-developer{
+    position: relative;
+    top: 50px;
+    margin-top: 40px;
+    display: flex;
+}
+
+
+/* data-analyst */
+data-analyst {
+    position: relative;
+    top: 218px;
 }
