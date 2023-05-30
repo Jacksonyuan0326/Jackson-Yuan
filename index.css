@@ -3,7 +3,10 @@ a{
     text-decoration: none;
     color:black
 }
-
+p{
+    font-size: 48px;
+    font-weight: 600;
+}
 
 /* body adjustment */
 body{
@@ -101,8 +104,11 @@ body{
 }
 
 
+
 /* data-analyst */
-data-analyst {
+.data-analyst {
     position: relative;
-    top: 218px;
+    top: 50px;
+    margin-top: 40px;
+    display: flex;
 }
