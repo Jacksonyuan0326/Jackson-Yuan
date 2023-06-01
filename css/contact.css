@@ -1,0 +1,37 @@
+/* basic setting */
+a{
+    text-decoration: none;
+    color:black
+}
+p{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+/* body adjustment */
+body{
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(180deg, #E4DBB3 17.95%, rgba(131, 196, 134, 0.727972) 49%, rgba(10, 196, 228, 0) 100%);
+}
+
+
+/* Navigation */
+.navigation .website-logo{
+    display: inline-block;
+
+    margin: 10px 10px;
+}
+.navigation .switchlink{
+    margin-top: 15px;
+    position: absolute;
+    right: 10%;
+    display: inline-block;
+}
+.navigation a{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
