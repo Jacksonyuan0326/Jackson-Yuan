@@ -9,7 +9,9 @@ p{
 }
 
 /* body adjustment */
-body{
+.page{
+    width: 1348px;
+    height: 3500px;
     position: absolute;
     width: 100%;
     background: linear-gradient(180deg, #E4DBB3 17.95%, rgba(131, 196, 134, 0.727972) 49%, rgba(10, 196, 228, 0) 100%);

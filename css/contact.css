@@ -7,6 +7,9 @@ p{
     font-size: 48px;
     font-weight: 600;
 }
+ul{
+    list-style: none;
+}
 
 /* body adjustment */
 body{
@@ -34,4 +37,8 @@ body{
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
 
+}
+
+.contactlogo{
+    display: none;
 }
