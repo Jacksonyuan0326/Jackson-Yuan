@@ -75,10 +75,16 @@ p{
     margin-top: 40px;
     margin-left: 20%;
 }
-.introduction .contactlogo img{
+.introduction .contactlogo a {
     display: inline-block;
     margin-left: 15px;
-    /* float: right; */
+}
+.introduction .contactlogo img{
+    display: block;
+}
+.introduction .contactlogo > img {
+    display: inline-block;
+    margin-left: 15px;
 }
 .introduction .selfie{
     display: inline-block;
