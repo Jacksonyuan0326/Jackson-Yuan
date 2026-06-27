@@ -1,63 +1,88 @@
 /* basic setting */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
-a{
+a {
     text-decoration: none;
-    color:black
+    color: black;
 }
-p{
+
+p {
     font-size: 48px;
     font-weight: 600;
 }
 
 /* body adjustment */
-body{
-    display: flex;
-    justify-content: center;
-    align-items:center;
+.page {
+    position: relative;
+    width: 100%;
     min-height: 100vh;
     background: linear-gradient(180deg, #E4DBB3 17.95%, rgba(131, 196, 134, 0.727972) 49%, rgba(10, 196, 228, 0) 100%);
 }
 
-
 /* Navigation */
-.navigation .website-logo{
-    position: absolute;
+.navigation .website-logo {
     display: inline-block;
-
     margin: 10px 10px;
 }
-.navigation .switchlink{
+
+.navigation .switchlink {
     margin-top: 15px;
     position: absolute;
     right: 10%;
     display: inline-block;
 }
-.navigation a{
+
+.navigation a {
     margin-left: 10px;
     font-size: 20px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.container{
-    position: relative;
+/* Education header */
+.education-header {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 40px;
+}
+
+.education-header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.education-period {
+    font-size: 18px;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Card grid */
+.container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 100px 50px;
-    padding: 100px 50px;
+    gap: 50px;
+    padding: 0 50px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container .card{
+.container .card {
     position: relative;
     width: 350px;
     height: 300px;
     background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.container .card .img {
+    height: 120px;
+    background-color: currentColor;
+}
+
+.container .card .content {
+    padding: 24px;
 }
