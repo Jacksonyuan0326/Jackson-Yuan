@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <script type = "text/javascript" src="./javascript/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/animations.css">
     <title>Document</title>
 </head>
 <body>
@@ -25,16 +25,27 @@
         <div>
             <div class="self-introduction"><h2>Hello, This is</h2>
                 <h1><p>Jackson Yuan</p></h1>
-                <h3>A mindful computer science student at Simon Fraser University.</h3>
+                <h3>A Computing Science graduate from Simon Fraser University.</h3>
             </div>
             
             
             <div class="contactlogo">
-                <img src="./image/contact_logo/GitHub.png" alt="Github" title="GitHub" id="github">
-                <img src="./image/contact_logo/LinkedIn.png" alt="LinkedIn" title="LinkedIn" id="linkedin">
-                <img src="./image/contact_logo/WeChat.png" alt="Wechat" title="Wechat" id="wechat">
-                <img src="./image/contact_logo/Instagram.png" alt="Instagram" title="Instagram" id="instagram">
-                <img src="./image/contact_logo/Mail.png" alt="Mail" title="Email" id="mail">
+                <a href="https://github.com/Jacksonyuan0326" target="_blank" rel="noopener noreferrer" title="GitHub" id="github">
+                    <img src="./image/contact_logo/GitHub.png" alt="Github">
+                </a>
+                <a href="https://www.linkedin.com/in/yu-yuan-748450242/" target="_blank" rel="noopener noreferrer" title="LinkedIn" id="linkedin">
+                    <img src="./image/contact_logo/LinkedIn.png" alt="LinkedIn">
+                </a>
+                <span class="wechat-wrapper" id="wechat">
+                    <img src="./image/contact_logo/WeChat.png" alt="Wechat" title="Wechat">
+                    <div class="wechat-qrcode">
+                        <img src="./image/contact_logo/wechat QRcode.jpg" alt="WeChat QR Code">
+                    </div>
+                </span>
+                <a href="https://www.instagram.com/jackson_yuan2000/" target="_blank" rel="noopener noreferrer" title="Instagram" id="instagram">
+                    <img src="./image/contact_logo/Instagram.png" alt="Instagram">
+                </a>
+                <img src="./image/contact_logo/Mail.png" alt="Mail" title="Click to copy email" id="mail" class="copy-email-trigger">
             </div>
 
             <img src="./image/contact_logo/Resume.png" alt="Resume" title="Resume" id="resume">
@@ -93,5 +104,7 @@
         <img src="./image/Data_Analyst.png" alt="data-analyst">
     </div>
 </div>
+    <script type="text/javascript" src="./javascript/contact-icons.js"></script>
+    <script type="text/javascript" src="./javascript/animations.js"></script>
 </body>
 </html>

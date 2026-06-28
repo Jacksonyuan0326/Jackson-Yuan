@@ -64,9 +64,9 @@ p{
     margin-left: 5%;
 }
 .introduction .contactlogo{
-    display: block;
-    width: 390px;
-    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     margin-top: 40px;
     margin-left: 12%;
 }
@@ -75,10 +75,23 @@ p{
     margin-top: 40px;
     margin-left: 20%;
 }
+.introduction .contactlogo a {
+    display: block;
+    line-height: 0;
+    flex-shrink: 0;
+}
+.introduction .contactlogo .wechat-wrapper {
+    display: block;
+    position: relative;
+    line-height: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
 .introduction .contactlogo img{
-    display: inline-block;
-    margin-left: 15px;
-    /* float: right; */
+    display: block;
+}
+.introduction .contactlogo > img {
+    flex-shrink: 0;
 }
 .introduction .selfie{
     display: inline-block;
