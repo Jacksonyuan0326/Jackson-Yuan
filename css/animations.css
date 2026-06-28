@@ -187,11 +187,14 @@ html {
 .introduction #resume {
     opacity: 0;
     animation: fadeInUp 0.7s ease 0.9s forwards;
-    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
 }
 
-.introduction #resume:hover {
+.introduction #resume img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.introduction #resume:hover img {
     transform: scale(1.08);
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.2));
 }
@@ -229,17 +232,13 @@ html {
     animation: shimmer 4s linear infinite;
 }
 
-.SDE.software img,
-.WEB.software img,
-.DA.software img {
+.skill-item img {
     transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
-    cursor: default;
 }
 
-.SDE.software img:hover,
-.WEB.software img:hover,
-.DA.software img:hover {
-    transform: scale(1.2) translateY(-6px);
+.skill-item:hover img,
+.skill-item:focus-within img {
+    transform: scale(1.15) translateY(-4px);
     filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
 }
 
@@ -272,29 +271,28 @@ html {
 }
 
 /* ===== Project Page ===== */
-.project-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 120px 40px 60px;
+.project-grid .project-card {
+    opacity: 0;
+    animation: fadeInUp 0.7s ease forwards;
 }
 
-.project-gallery img,
-.project-gallery video {
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-                box-shadow 0.4s ease;
-    cursor: pointer;
-    max-width: 400px;
+.project-grid .project-card:nth-child(1) { animation-delay: 0.15s; }
+.project-grid .project-card:nth-child(2) { animation-delay: 0.3s; }
+.project-grid .project-card:nth-child(3) { animation-delay: 0.45s; }
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
-.project-gallery img:hover,
-.project-gallery video:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+.project-card-media img,
+.project-card-media video {
+    transition: transform 0.45s ease;
+}
+
+.project-card:hover .project-card-media img,
+.project-card:hover .project-card-media video {
+    transform: scale(1.06);
 }
 
 /* ===== Contact Page ===== */
@@ -303,7 +301,7 @@ html {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    padding-top: 60px;
+    padding: 60px 24px 40px;
 }
 
 .contact-page-content .contactlogo {
@@ -315,7 +313,7 @@ html {
     animation: fadeInLeft 0.6s ease forwards;
     padding: 16px 24px;
     margin: 12px 0;
-    background: rgba(255, 255, 255, 0.6);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.55));
     border-radius: 12px;
     backdrop-filter: blur(8px);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
@@ -328,6 +326,7 @@ html {
 .contact-page-content .contactlogo ul li:nth-child(2) { animation-delay: 0.35s; }
 .contact-page-content .contactlogo ul li:nth-child(3) { animation-delay: 0.5s; }
 .contact-page-content .contactlogo ul li:nth-child(4) { animation-delay: 0.65s; }
+.contact-page-content .contactlogo ul li:nth-child(5) { animation-delay: 0.8s; }
 
 .contact-page-content .contactlogo ul li:hover {
     transform: translateX(10px);

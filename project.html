@@ -6,26 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/project.css">
     <link rel="stylesheet" type="text/css" href="./css/animations.css">
-    <script type="text/javascript" src="./javascript/project.js"></script>
-    <script type="text/javascript" src="./javascript/animations.js"></script>
-    <title>Document</title>
+    <title>Projects — Jackson Yuan</title>
 </head>
 <body>
-    <div class="navigation">
-        <div class="website-logo"><img src="./image/WebsiteLogo.png" alt=""></div>
-        <div class="switchlink">
-            <a href="index.html" class="about-page">About</a>
-            <a href="education.html" class="education-page">Education</a>
-            <a href="project.html" class="project-page">Project</a>
-            <a href="experience.html" class="experience-page">Experience</a>
-            <a href="contact.html" class="contact-page">Contact</a>
+    <div class="page">
+        <div class="navigation">
+            <div class="website-logo"><img src="./image/WebsiteLogo.png" alt=""></div>
+            <div class="switchlink">
+                <a href="index.html" class="about-page">About</a>
+                <a href="education.html" class="education-page">Education</a>
+                <a href="project.html" class="project-page">Project</a>
+                <a href="experience.html" class="experience-page">Experience</a>
+                <a href="contact.html" class="contact-page">Contact</a>
+            </div>
+        </div>
+
+        <div class="project-header">
+            <h1>Projects</h1>
+            <p class="project-header-desc">A selection of work that reflects how I build, learn, and turn ideas into working software.</p>
+        </div>
+
+        <div class="project-grid">
+            <article class="project-card" data-link="https://jacksonyuan0326.github.io/Weather-APP/">
+                <div class="project-card-accent" style="--accent: #0ac4e4;"></div>
+                <div class="project-card-media">
+                    <img src="./image/project_image/WeatherApp.png" alt="Weather App preview">
+                </div>
+                <div class="project-card-body">
+                    <span class="project-card-tag">Web App</span>
+                    <h2>Weather App</h2>
+                    <p class="project-card-desc">A clean weather application that fetches live forecast data and presents current conditions, temperature, and location details in an easy-to-read interface.</p>
+                    <div class="project-card-section">
+                        <h3>Tech Stack</h3>
+                        <ul class="project-tech">
+                            <li>JavaScript</li>
+                            <li>HTML &amp; CSS</li>
+                            <li>Weather API</li>
+                            <li>Responsive UI</li>
+                        </ul>
+                    </div>
+                    <div class="project-card-section">
+                        <h3>Idea</h3>
+                        <p class="project-idea">I wanted a lightweight app that turns raw API data into something instantly useful — focusing on clarity, fast lookups, and a layout that works on any screen size.</p>
+                    </div>
+                    <a href="https://jacksonyuan0326.github.io/Weather-APP/" target="_blank" rel="noopener noreferrer" class="project-card-link">Try Live Demo →</a>
+                </div>
+            </article>
+
+            <article class="project-card" data-link="https://frozenhydrant.github.io/found-in-translation/">
+                <div class="project-card-accent" style="--accent: #e07a5f;"></div>
+                <div class="project-card-media">
+                    <img src="./image/project_image/CrazyTranslator.png" alt="Crazy Translator preview">
+                </div>
+                <div class="project-card-body">
+                    <span class="project-card-tag">Interactive Web</span>
+                    <h2>Crazy Translator</h2>
+                    <p class="project-card-desc">Found in Translation — a playful translation experience that reimagines how language can be converted, explored, and shared through an interactive web interface.</p>
+                    <div class="project-card-section">
+                        <h3>Tech Stack</h3>
+                        <ul class="project-tech">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Translation APIs</li>
+                        </ul>
+                    </div>
+                    <div class="project-card-section">
+                        <h3>Idea</h3>
+                        <p class="project-idea">Language tools are often purely functional. This project experiments with making translation feel more engaging — blending utility with personality so users actually enjoy the process.</p>
+                    </div>
+                    <a href="https://frozenhydrant.github.io/found-in-translation/" target="_blank" rel="noopener noreferrer" class="project-card-link">Try Live Demo →</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-accent" style="--accent: #2d6a4f;"></div>
+                <div class="project-card-media project-card-media--video">
+                    <video src="./image/project_image/2048video.mp4" controls muted loop playsinline></video>
+                </div>
+                <div class="project-card-body">
+                    <span class="project-card-tag">Game</span>
+                    <h2>2048</h2>
+                    <p class="project-card-desc">A browser-based implementation of the classic 2048 puzzle game with smooth tile merging, score tracking, and keyboard controls for an addictive single-player experience.</p>
+                    <div class="project-card-section">
+                        <h3>Tech Stack</h3>
+                        <ul class="project-tech">
+                            <li>JavaScript</li>
+                            <li>DOM Manipulation</li>
+                            <li>CSS Animations</li>
+                            <li>Game Logic</li>
+                        </ul>
+                    </div>
+                    <div class="project-card-section">
+                        <h3>Idea</h3>
+                        <p class="project-idea">I rebuilt 2048 from scratch to practice state management and UI feedback loops — every merge and slide needed to feel responsive, which made it a great exercise in front-end logic.</p>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
 
-    <div class="project-gallery">
-        <img src="./image/project_image/WeatherApp.png" alt="Weather APP" id="weatherapp">
-        <img src="./image/project_image/CrazyTranslator.png" alt="Crazy Translator" id="crazyTranslator">
-        <video src="./image/project_image/2048video.mp4" controls autoplay></video>
-    </div>
+    <script type="text/javascript" src="./javascript/project.js"></script>
+    <script type="text/javascript" src="./javascript/animations.js"></script>
 </body>
 </html>
