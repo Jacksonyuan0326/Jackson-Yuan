@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var scrollElements = document.querySelectorAll(
         '.software-developer, .web-developer, .data-analyst, ' +
-        '.introduction .selfie, .container, .project-gallery img, .project-gallery video'
+        '.introduction .selfie, .container'
     );
 
     scrollElements.forEach(function (el, index) {

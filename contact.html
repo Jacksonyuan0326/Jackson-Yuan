@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/contact.css">
     <link rel="stylesheet" type="text/css" href="./css/animations.css">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
-<body>
+<body class="contact-page">
+    <div class="contact-bg" aria-hidden="true"></div>
+
     <div class="navigation">
         <div class="website-logo"><img src="./image/WebsiteLogo.png" alt=""></div>
         <div class="switchlink">
@@ -21,30 +23,38 @@
     </div>
 
     <div class="contact-page-content">
-    <div class="contactlogo">
-        <ul>
-            <li> 
-                <img src="./image/contact_logo/LinkedIn.png" alt=""><a href="https://www.linkedin.com/in/yu-yuan-748450242/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </li>
-            <li>
-                <img src="./image/contact_logo/Mail.png" alt="" class="copy-email-trigger"><a href="#" class="copy-email-trigger">Email</a>
-            </li>
-            <li>
-                <a href="#">Text</a>
-            </li>
-            <li class="wechat-item">
-                <span class="wechat-wrapper">
-                    <img src="./image/contact_logo/WeChat.png" alt="">
-                    <a href="#">Wechat</a>
-                    <div class="wechat-qrcode">
-                        <img src="./image/contact_logo/wechat QRcode.jpg" alt="WeChat QR Code">
-                    </div>
-                </span>
-            </li>
-        </ul>
-    </div>
+        <div class="contact-panel">
+            <h1 class="contact-panel-title">Let's Connect</h1>
+            <p class="contact-panel-subtitle">Reach out through any channel below — I'd love to hear from you.</p>
+            <div class="contactlogo">
+                <ul>
+                    <li>
+                        <img src="./image/contact_logo/LinkedIn.png" alt=""><a href="https://www.linkedin.com/in/yu-yuan-748450242/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                    <li>
+                        <img src="./image/contact_logo/Mail.png" alt="" class="copy-email-trigger"><a href="#" class="copy-email-trigger">Email</a>
+                    </li>
+                    <li>
+                        <img src="./image/contact_logo/GitHub.png" alt=""><a href="https://github.com/Jacksonyuan0326" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li>
+                        <img src="./image/contact_logo/Instagram.png" alt=""><a href="https://www.instagram.com/jackson_yuan2000/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </li>
+                    <li class="wechat-item">
+                        <span class="wechat-wrapper">
+                            <img src="./image/contact_logo/WeChat.png" alt="">
+                            <a href="#">Wechat</a>
+                            <div class="wechat-qrcode">
+                                <img src="./image/contact_logo/wechat QRcode.jpg" alt="WeChat QR Code">
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="./javascript/contact-icons.js"></script>
+    <script type="text/javascript" src="./javascript/contact-bg.js"></script>
     <script type="text/javascript" src="./javascript/animations.js"></script>
 </body>
 </html>

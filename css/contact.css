@@ -1,44 +1,240 @@
 /* basic setting */
-a{
+a {
     text-decoration: none;
-    color:black
+    color: black;
 }
-p{
+
+p {
     font-size: 48px;
     font-weight: 600;
 }
-ul{
+
+ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* body adjustment */
-body{
+/* page shell */
+body.contact-page {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(
+        135deg,
+        #e4dbb3 0%,
+        #b8e0c8 22%,
+        #7ec8e3 48%,
+        #c9b8e8 72%,
+        #f5d0a9 100%
+    );
+}
+
+.contact-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.contact-bg::before,
+.contact-bg::after {
+    content: '';
     position: absolute;
-    width: 100%;
-    background: linear-gradient(180deg, #E4DBB3 17.95%, rgba(131, 196, 134, 0.727972) 49%, rgba(10, 196, 228, 0) 100%);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.45;
+    animation: contactOrbPulse 12s ease-in-out infinite;
 }
 
+.contact-bg::before {
+    width: 420px;
+    height: 420px;
+    top: -80px;
+    left: -60px;
+    background: radial-gradient(circle, #0ac4e4 0%, transparent 70%);
+}
+
+.contact-bg::after {
+    width: 500px;
+    height: 500px;
+    right: -100px;
+    bottom: -120px;
+    background: radial-gradient(circle, #e879f9 0%, transparent 70%);
+    animation-delay: -6s;
+}
+
+.contact-bg-layer {
+    position: absolute;
+    inset: 0;
+}
+
+.contact-bg-icon {
+    position: absolute;
+    opacity: 0;
+    will-change: transform;
+}
+
+.contact-bg-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+}
+
+.contact-bg-layer--1 .contact-bg-icon {
+    animation-name: contactDriftA;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.contact-bg-layer--2 .contact-bg-icon {
+    animation-name: contactDriftB;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.contact-bg-layer--3 .contact-bg-icon {
+    animation-name: contactDriftC;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.contact-bg-layer--4 .contact-bg-icon {
+    animation-name: contactDriftD;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes contactOrbPulse {
+    0%, 100% { transform: scale(1) translate(0, 0); }
+    50% { transform: scale(1.12) translate(20px, -15px); }
+}
+
+@keyframes contactDriftA {
+    0% { transform: translate(-12vw, 0) rotate(0deg); opacity: 0; }
+    8% { opacity: var(--icon-opacity, 0.28); }
+    92% { opacity: var(--icon-opacity, 0.28); }
+    100% { transform: translate(112vw, -8vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes contactDriftB {
+    0% { transform: translate(112vw, 0) rotate(0deg); opacity: 0; }
+    8% { opacity: var(--icon-opacity, 0.22); }
+    92% { opacity: var(--icon-opacity, 0.22); }
+    100% { transform: translate(-12vw, 10vh) rotate(-360deg); opacity: 0; }
+}
+
+@keyframes contactDriftC {
+    0% { transform: translate(0, 110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: var(--icon-opacity, 0.2); }
+    90% { opacity: var(--icon-opacity, 0.2); }
+    100% { transform: translate(15vw, -15vh) rotate(180deg); opacity: 0; }
+}
+
+@keyframes contactDriftD {
+    0% { transform: translate(20vw, -15vh) rotate(0deg); opacity: 0; }
+    10% { opacity: var(--icon-opacity, 0.25); }
+    90% { opacity: var(--icon-opacity, 0.25); }
+    100% { transform: translate(-10vw, 110vh) rotate(-180deg); opacity: 0; }
+}
 
 /* Navigation */
-.navigation .website-logo{
-    display: inline-block;
+.navigation {
+    position: relative;
+    z-index: 100;
+}
 
+.navigation .website-logo {
+    display: inline-block;
     margin: 10px 10px;
 }
-.navigation .switchlink{
+
+.navigation .switchlink {
     margin-top: 15px;
     position: absolute;
     right: 10%;
     display: inline-block;
 }
-.navigation a{
+
+.navigation a {
     margin-left: 10px;
     font-size: 20px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.contactlogo{
+.navigation .contact-page {
+    color: #2d6a4f;
+}
+
+/* main content */
+.contact-page-content {
+    position: relative;
+    z-index: 10;
+}
+
+.contact-panel {
+    position: relative;
+    padding: 36px 40px 32px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(14px);
+    box-shadow:
+        0 20px 50px rgba(45, 106, 79, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.contact-panel::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 26px;
+    background: linear-gradient(135deg, #2d6a4f, #0ac4e4, #e879f9, #f59e0b);
+    z-index: -1;
+    opacity: 0.55;
+}
+
+.contact-panel-title {
+    margin: 0 0 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #2d6a4f, #0ac4e4, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-panel-subtitle {
+    margin: 0 0 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #4b5563;
+}
+
+.contactlogo {
     display: none;
+}
+
+.contact-page-content .contactlogo ul li {
+    border-left: 4px solid var(--accent, #2d6a4f);
+}
+
+.contact-page-content .contactlogo ul li:nth-child(1) { --accent: #0a66c2; }
+.contact-page-content .contactlogo ul li:nth-child(2) { --accent: #ea4335; }
+.contact-page-content .contactlogo ul li:nth-child(3) { --accent: #24292f; }
+.contact-page-content .contactlogo ul li:nth-child(4) { --accent: #e4405f; }
+.contact-page-content .contactlogo ul li:nth-child(5) { --accent: #07c160; }
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-bg-icon,
+    .contact-bg::before,
+    .contact-bg::after {
+        animation: none !important;
+        opacity: 0.15;
+    }
 }
